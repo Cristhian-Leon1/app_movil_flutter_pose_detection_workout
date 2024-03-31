@@ -4,19 +4,18 @@ import 'package:provider/provider.dart';
 
 import '../../../utils/custom/custom_colors.dart';
 
-class StartButtonNext extends StatelessWidget {
-  const StartButtonNext({super.key});
+class StartButtonPrevious extends StatelessWidget {
+  const StartButtonPrevious({super.key});
 
   @override
   Widget build(BuildContext context) {
     final onbordingProvider = Provider.of<OnbordingProvider>(context);
     return TextButton(
       onPressed: () {
-        onbordingProvider.nextPage();
-
+        onbordingProvider.previousPage();
       },
       child: const Icon(
-        Icons.arrow_forward_ios_rounded,
+        Icons.arrow_back_ios_rounded,
         color: AppColors.white,
         size: 50,
       ),

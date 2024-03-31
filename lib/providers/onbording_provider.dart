@@ -9,4 +9,14 @@ class OnbordingProvider with ChangeNotifier {
     _currentPage = page;
     notifyListeners();
   }
+
+  nextPage() {
+    _currentPage++;
+    notifyListeners();
+  }
+
+  previousPage() {
+    _currentPage--;
+    notifyListeners();
+  }
 }

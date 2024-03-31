@@ -1,3 +1,4 @@
+import 'package:app_movil_flutter_pose_detection_workout/utils/custom/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 class StartButtonSkip extends StatelessWidget {
@@ -6,16 +7,24 @@ class StartButtonSkip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 15),
-      child: TextButton(
+      padding: const EdgeInsets.only(left: 25),
+      child: ElevatedButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/home');
+          Navigator.pushNamed(context, '/login');
         },
+        style: ElevatedButton.styleFrom(
+          foregroundColor: AppColors.baseColorAI,
+          backgroundColor: AppColors.black87,
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
         child: const Text(
           'Saltar intro',
           style: TextStyle(
-            color: Colors.white,
-            fontSize: 27,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
