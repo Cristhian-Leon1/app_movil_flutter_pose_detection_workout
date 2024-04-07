@@ -1,6 +1,7 @@
-import 'package:app_movil_flutter_pose_detection_workout/pages/login/login_screen.dart';
+import 'package:app_movil_flutter_pose_detection_workout/pages/auth/auth_screen.dart';
 import 'package:app_movil_flutter_pose_detection_workout/pages/splash/splash_screen.dart';
 import 'package:app_movil_flutter_pose_detection_workout/pages/start/start_screen.dart';
+import 'package:app_movil_flutter_pose_detection_workout/providers/login_provider.dart';
 import 'package:app_movil_flutter_pose_detection_workout/providers/onbording_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:app_movil_flutter_pose_detection_workout/pages/home/home_screen.dart';
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<OnbordingProvider>(
           create: (_) => OnbordingProvider(),
         ),
+        ChangeNotifierProvider<LoginProvider>(
+          create: (_) => LoginProvider(),
+        ),
       ],
       child: const MaterialAppWithTheme(),
     );
@@ -50,7 +54,7 @@ class MaterialAppWithTheme extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/splash': (context) => const SplashPage(),
         '/start': (context) => const StartPage(),
-        '/login': (context) => const LoginPage(),
+        '/auth': (context) => const AuthPage(),
         '/home': (context) => const HomePage(),
       },
     );

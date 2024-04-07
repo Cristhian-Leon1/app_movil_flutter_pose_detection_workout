@@ -9,11 +9,10 @@ class StartButtonNext extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final onbordingProvider = Provider.of<OnbordingProvider>(context);
+    final onboardingProvider = Provider.of<OnbordingProvider>(context);
     return TextButton(
       onPressed: () {
-        onbordingProvider.nextPage();
-
+        onboardingProvider.nextPage();
       },
       child: const Icon(
         Icons.arrow_forward_ios_rounded,
