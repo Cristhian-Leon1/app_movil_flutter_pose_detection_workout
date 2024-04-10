@@ -10,7 +10,7 @@ class StartButtonSkip extends StatelessWidget {
       padding: const EdgeInsets.only(left: 25),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/login');
+          Navigator.pushNamed(context, '/auth');
         },
         style: ElevatedButton.styleFrom(
           foregroundColor: AppColors.baseColorAI,

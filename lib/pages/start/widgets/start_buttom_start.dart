@@ -11,7 +11,7 @@ class StartButtonStart extends StatelessWidget {
       padding: const EdgeInsets.only(right: 25),
       child: ElevatedButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/login');
+            Navigator.pushReplacementNamed(context, '/auth');
           },
           style: ElevatedButton.styleFrom(
             foregroundColor: AppColors.baseColorAI,
