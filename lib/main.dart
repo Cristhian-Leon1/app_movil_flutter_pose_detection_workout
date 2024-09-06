@@ -1,4 +1,5 @@
 import 'package:app_movil_flutter_pose_detection_workout/pages/auth/auth_screen.dart';
+import 'package:app_movil_flutter_pose_detection_workout/pages/detection/detection_screen.dart';
 import 'package:app_movil_flutter_pose_detection_workout/pages/splash/splash_screen.dart';
 import 'package:app_movil_flutter_pose_detection_workout/pages/start/start_screen.dart';
 import 'package:app_movil_flutter_pose_detection_workout/providers/login_provider.dart';
@@ -50,12 +51,13 @@ class MaterialAppWithTheme extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: theme.getTheme(),
-      initialRoute: '/splash',
+      initialRoute: '/detection',
       routes: <String, WidgetBuilder>{
         '/splash': (context) => const SplashPage(),
         '/start': (context) => const StartPage(),
         '/auth': (context) => const AuthPage(),
         '/home': (context) => const HomePage(),
+        '/detection': (context) => const PoseDetectorView(),
       },
     );
   }
